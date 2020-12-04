@@ -1,6 +1,3 @@
-// SaveReads.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
 #include <vector>
 #include <string>
@@ -33,6 +30,7 @@ index_t ParseIndex(string& line) {
 
 class ReadIndex {
 public:
+    // Maybe change to vector + binsearch
 	unordered_map<index_t, int64_t> index_map;
 	ifstream file;
 
@@ -138,7 +136,7 @@ int main(int argc, char* argv[])
 		zstr::ifstream input_file(filepath.string());
 
 		fs::path output_filepath = output_dir;
-		output_filepath /= filepath;
+		output_filepath /= fs::path(filepath).filename();
 
 		zstr::ofstream output_file(output_filepath.string());
 		auto match_stats = FixFile(input_file, output_file, index);
