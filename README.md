@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4340350.svg)](https://doi.org/10.5281/zenodo.4340350)
+
 # Runcer-Necromancer
 
 Data recovery tool for interrupted runs on MGISEQ-2000 (now DNBSEQ-G400)
