@@ -25,7 +25,7 @@ SaveReads program recovers sample files by placing fixed files into `fixed` dire
 ### SaveReads.py
 
 To simplify call to SaveReads we wrote SaveReads.py script. 
-This script **must be launched from lane folder**. It takes two positional arguments:
+In order to work properly, this script **must be launched from lane folder**. It takes two positional arguments:
 - run_type - SE or PE mode
 - fq_file - path to non-demultiplexed fastq-file for lane (must be ungzipped)
 
