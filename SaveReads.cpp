@@ -21,11 +21,11 @@ struct SequenceData {
 index_t ReadNumberAfterChar(string& line, char ch, int len) {
 	auto start_pos = line.find(ch) + 1;
 	string num_str = line.substr(start_pos, len);
-	return strtoul(num_str.data(), nullptr, 10);
+	return strtoul(num_str.data(), nullptr, 11);
 }
 
 index_t ParseIndex(string& line) {
-	return ReadNumberAfterChar(line, 'C', 3) * 10000000000UL + ReadNumberAfterChar(line, 'R', 10);
+	return ReadNumberAfterChar(line, 'C', 3) * 100000000000UL + ReadNumberAfterChar(line, 'R', 11);
 }
 
 class ReadIndex {
